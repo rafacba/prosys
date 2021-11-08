@@ -1,0 +1,15 @@
+<h3>{{leyenda}}</h3>
+
+<div class="input-group">
+    <span class="input-group-btn">
+        <button (click)="progreso(-5)" class="btn btn-primary" type="button">
+            <i class="mdi mdi-minus"></i>
+        </button>
+    </span>
+    <input #txtP type="number" min="1" max="100" (ngModelChange)="onChange($event)" class="form-control" name="porcentaje" [(ngModel)]="porcentaje">
+    <span class="input-group-btn">
+        <button (click)="progreso(5)" class="btn btn-primary" type="button">
+            <i class="mdi mdi-plus"></i>
+        </button>
+    </span>
+</div>

@@ -3,6 +3,8 @@
 // ======================================================
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 // ======================================================
 // Pages
@@ -12,23 +14,30 @@ import { ProgressComponent } from './progress/progress.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
+import { PersonalComponent } from './personal/personal.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 // ======================================================
 // Routes
 // ======================================================
 import { PAGES_ROUTES } from './pages.routes';
+import { ComponentModule } from '../components/component.module';
 
 @NgModule({
     declarations: [
         DashboardComponent,
         ProgressComponent,
         Graficas1Component,
-        PagesComponent
+        PagesComponent,
+        PersonalComponent,
+        AccountSettingsComponent,
     ],
     imports: [ 
         CommonModule,
         SharedModule,
-        PAGES_ROUTES
+        ComponentModule,
+        PAGES_ROUTES,
+        FormsModule,
     ],
     exports: [
         DashboardComponent,
